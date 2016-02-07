@@ -1,99 +1,106 @@
 <!doctype html>
 <html>
+
   <head>
     <title>Delivery Date Estimation Tool</title>
     <script src="script.js"></script>
     <link rel="stylesheet" href="index.css">
   </head>
-  
+
   <body>
     <form action="">
-  <fieldset>
-  <legend>Delivery Date Estimation Tool</legend>
-  Product Manufacturer:<br>
-    <select>
-      <option value="Bug Off">Bug Off</option>
-      <option value="Carlson">Carlson</option>
-      <option value="Cat Mate/Dog Mate">Cat Mate/Dog Mate</option>
-      <option value="CatHole">CatHole</option>
-    </select>
-    <br><br>
-Ship-to State:<br>
-      <select>
-      <option value="Alabama">Alabama</option>
-      <option value="Alaska">Alaska</option>
-      <option value="Arizona">Arizona</option>
-      <option value="Arkansas">Arkansas</option>
-      <option value="California">California</option>
-    </select>
-    <br><br>
-    <input type="submit" value="Submit!">
-  </fieldset>
-</form>
+      <fieldset>
+        <legend>Delivery Date Estimation Tool</legend>
+        Product Manufacturer:
+        <br>
+        <select id="manufacturer" onchange="setManufacturer()">
+          <option value="" disabled selected style="display:none;">Select Manufacturer</option>
+          <option value="Bug Off">Bug Off</option>
+          <option value="Carlson">Carlson</option>
+          <option value="Cat Mate/Dog Mate">Cat Mate/Dog Mate</option>
+          <option value="CatHole">CatHole</option>
+        </select>
+        <br>
+        <br> Ship-to State:
+        <br>
+        <select id="state">
+          <option value="Alabama">Alabama</option>
+          <option value="Alaska">Alaska</option>
+          <option value="Arizona">Arizona</option>
+          <option value="Arkansas">Arkansas</option>
+          <option value="California">California</option>
+        </select>
+        <br>
+        <br>
+        <input type="submit" value="Submit!">
+      </fieldset>
+    </form>
 
-
+    <!--
 <div id="primary_nav_wrap">
-      <a href="#" onclick="menuChange('1')">Product Manufacturer</a>
-      <ul id="list1">
-        <li>Sub Menu 1</li>
-        <li>Sub Menu 2</li>
-        <li>Sub Menu 3</li>
-        <li>Sub Menu 4</li>
-        <li>Sub Menu 5</li>
-      </ul>
-      <a href="#" onclick="menuChange('2')">Ship-to State</a>
-      <ul id="list2">
-        <li>Alabama</li>
-        <li>Alaska</li>
-        <li>Arizona</li>
-        <li>Arkansas</li>
-        <li>California</li>
-        <li>Colorado</li>
-        <li>Connecticut</li>
-        <li>Delaware</li>
-        <li>Florida</li>
-        <li>Georgia</li>
-        <li>Hawaii</li>
-        <li>Idaho</li>
-        <li>Illinois</li>
-        <li>Indiana</li>
-        <li>Iowa</li>
-        <li>Kansas</li>
-        <li>Kentucky</li>
-        <li>Louisiana</li>
-        <li>Maine</li>
-        <li>Maryland</li>
-        <li>Massachusetts</li>
-        <li>Michigan</li>
-        <li>Minnesota</li>
-        <li>Mississippi</li>
-        <li>Missouri</li>
-        <li>Montana</li>
-        <li>Nebraska</li>
-        <li>Nevada</li>
-        <li>New Hampshire</li>
-        <li>New Jersey</li>
-        <li>New Mexico</li>
-        <li>New York</li>
-        <li>North Carolina</li>
-        <li>North Dakota</li>
-        <li>Ohio</li>
-        <li>Oklahoma</li>
-        <li>Oregon</li>
-        <li>Pennsylvania</li>
-        <li>Rhode Island</li>
-        <li>South Carolina</li>
-        <li>South Dakota</li>
-        <li>Tennessee</li>
-        <li>Texas</li>
-        <li>Utah</li>
-        <li>Vermont</li>
-        <li>Virginia</li>
-        <li>Washington</li>
-        <li>West Virginia</li>
-        <li>Wisconsin</li>
-        <li>Wyoming</li>
-      </ul>
-    </div>
+  <a href="#" onclick="menuChange('1')">Product Manufacturer</a>
+  <ul id="list1">
+    <li>Sub Menu 1</li>
+    <li>Sub Menu 2</li>
+    <li>Sub Menu 3</li>
+    <li>Sub Menu 4</li>
+    <li>Sub Menu 5</li>
+  </ul>
+  <a href="#" onclick="menuChange('2')">Ship-to State</a>
+  <ul id="list2">
+    <li>Alabama</li>
+    <li>Alaska</li>
+    <li>Arizona</li>
+    <li>Arkansas</li>
+    <li>California</li>
+    <li>Colorado</li>
+    <li>Connecticut</li>
+    <li>Delaware</li>
+    <li>Florida</li>
+    <li>Georgia</li>
+    <li>Hawaii</li>
+    <li>Idaho</li>
+    <li>Illinois</li>
+    <li>Indiana</li>
+    <li>Iowa</li>
+    <li>Kansas</li>
+    <li>Kentucky</li>
+    <li>Louisiana</li>
+    <li>Maine</li>
+    <li>Maryland</li>
+    <li>Massachusetts</li>
+    <li>Michigan</li>
+    <li>Minnesota</li>
+    <li>Mississippi</li>
+    <li>Missouri</li>
+    <li>Montana</li>
+    <li>Nebraska</li>
+    <li>Nevada</li>
+    <li>New Hampshire</li>
+    <li>New Jersey</li>
+    <li>New Mexico</li>
+    <li>New York</li>
+    <li>North Carolina</li>
+    <li>North Dakota</li>
+    <li>Ohio</li>
+    <li>Oklahoma</li>
+    <li>Oregon</li>
+    <li>Pennsylvania</li>
+    <li>Rhode Island</li>
+    <li>South Carolina</li>
+    <li>South Dakota</li>
+    <li>Tennessee</li>
+    <li>Texas</li>
+    <li>Utah</li>
+    <li>Vermont</li>
+    <li>Virginia</li>
+    <li>Washington</li>
+    <li>West Virginia</li>
+    <li>Wisconsin</li>
+    <li>Wyoming</li>
+  </ul>
+</div>-->
+
   </body>
+
 </html>
