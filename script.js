@@ -13,6 +13,15 @@ function setState() {
   alert("You have selected State: " + state);
 }
 
+function estimate() {
+  if (manufacturer && state) {
+    
+  }
+  else {
+    document.getElementById("msg").innerHTML = "Please select a manufacturer and a state.";
+  }
+}
+
 function menuChange(id) {
   if (document.getElementById('list' + id).style.display == 'none')
     document.getElementById('list' + id).style.display = 'block';
