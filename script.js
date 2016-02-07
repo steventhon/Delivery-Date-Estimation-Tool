@@ -106,8 +106,8 @@ function estimate() {
     var end = new Date();
     begin.setDate(now.getDate() + lag - 1);
     end.setDate(now.getDate() + lag + 3);
-    var end = 
-    document.getElementById("msg").innerHTML = "Estimated delivery date range (if ordered today):<br>Between " + formatDate(begin) + " and " + formatDate(end);
+    document.getElementById("msg").innerHTML = "Estimated delivery date range (if ordered today):";
+    document.getElementById("range").innerHTML = "Between " + formatDate(begin) + " and " + formatDate(end);
   }
   else {
     document.getElementById("msg").innerHTML = "Please select a manufacturer and a state.";
