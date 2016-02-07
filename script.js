@@ -78,7 +78,10 @@ var shipdays =
     [4,4,4,4,4,4,2,3,4,4,4,2,2,4,4,4,3,4,2,4,4,4,4,4,4,4,4],
     [3,3,3,3,3,3,3,2,3,3,3,3,4,3,3,3,4,3,4,3,3,3,3,3,3,3,3]];
 
+var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 var manufacturer, state;
+var now = new Date();
 
 function setManufacturer() {
   var m = document.getElementById("manufacturer");
@@ -90,9 +93,21 @@ function setState() {
   state = s.options[s.selectedIndex].value;
 }
 
+function formatDate(date) {
+  var format;
+  format = days[date.getDay()] + ", " + months[date.getMonth()] + " " + date.getDate();
+  return format;
+}
+
 function estimate() {
   if (manufacturer && state) {
-    document.getElementById("msg").innerHTML = "Estimated delivery date range (if ordered today):<br>" + shipdays[state][manufacturer];
+    var lag = shipdays[state][manufacturer] + latency[manufacturer];
+    var begin = new Date();
+    var end = new Date();
+    begin.setDate(now.getDate() + lag - 1);
+    end.setDate(now.getDate() + lag + 3);
+    var end = 
+    document.getElementById("msg").innerHTML = "Estimated delivery date range (if ordered today):<br>Between " + formatDate(begin) + " and " + formatDate(end);
   }
   else {
     document.getElementById("msg").innerHTML = "Please select a manufacturer and a state.";
