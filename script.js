@@ -7,6 +7,12 @@ function setManufacturer() {
   alert("You have selected Product Manufacturer: " + manufacturer);
 }
 
+function setState() {
+  var s = document.getElementById("state");
+  state = s.options[s.selectedIndex].value;
+  alert("You have selected State: " + state);
+}
+
 function menuChange(id) {
   if (document.getElementById('list' + id).style.display == 'none')
     document.getElementById('list' + id).style.display = 'block';
