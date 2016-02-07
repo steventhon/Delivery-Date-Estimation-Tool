@@ -24,6 +24,7 @@
     <br> Ship-to State:
     <br>
     <select id="state" onchange="setState()">
+      <option value="" disabled selected style="display:none;">Select State</option>
       <option value="Alabama">Alabama</option>
       <option value="Alaska">Alaska</option>
       <option value="Arizona">Arizona</option>
@@ -32,10 +33,11 @@
     </select>
     <br>
     <br>
-    <input type="submit" value="Submit!">
+    <span id="msg"></span>
+    <br>
+    <input type="button" value="Estimate!" onclick="estimate()">
   </fieldset>
 </form>
-
     <!--
 <div id="primary_nav_wrap">
   <a href="#" onclick="menuChange('1')">Product Manufacturer</a>
