@@ -81,7 +81,6 @@ var shipdays =
 var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 var manufacturer, state;
-var now = new Date();
 
 function setManufacturer() {
   var m = document.getElementById("manufacturer");
@@ -93,6 +92,17 @@ function setState() {
   state = s.options[s.selectedIndex].value;
 }
 
+// Add only business days to date
+function addBusinessDays(date, days) {
+  while (days) {
+    date.setDate(date.getDate() + 1);
+    if (date.getDay() != 0 && date.getDay() != 6) {
+      days--;
+    }
+  }
+}
+
+// Into a nice format of "Day, Month Date"
 function formatDate(date) {
   var format;
   format = days[date.getDay()] + ", " + months[date.getMonth()] + " " + date.getDate();
@@ -104,8 +114,8 @@ function estimate() {
     var lag = shipdays[state][manufacturer] + latency[manufacturer];
     var begin = new Date();
     var end = new Date();
-    begin.setDate(now.getDate() + lag - 1);
-    end.setDate(now.getDate() + lag + 3);
+    addBusinessDays(begin, lag - 1);
+    addBusinessDays(end, lag + 3);
     document.getElementById("msg").innerHTML = "Estimated delivery date range (if ordered today):";
     document.getElementById("range").innerHTML = "Between " + formatDate(begin) + " and " + formatDate(end);
   }
