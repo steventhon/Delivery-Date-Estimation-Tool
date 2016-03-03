@@ -1,18 +1,7 @@
-#primary_nav_wrap {
-  cursor: default;
+.estimate {
+  background:#b2d234!important;
+  padding: 5px 12px;
+  border:none;
+  cursor:pointer;
+  font-weight:bold;
 }
-
-#primary_nav_wrap ul
-{
-	list-style:none;
-}
-
-primary_nav_wrap ul li:hover
-{
-	background:#f6f6f6
-}
-
-//#primary_nav_wrap ul li:hover > ul
-//{
-//	display:block
-//}
