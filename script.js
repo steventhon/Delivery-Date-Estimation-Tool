@@ -87,11 +87,15 @@ var manufacturer, state;
 function setManufacturer() {
   var m = document.getElementById("manufacturer");
   manufacturer = m.options[m.selectedIndex].value;
+  document.getElementById("msg").innerHTML = "";
+  document.getElementById("range").innerHTML = "";
 }
 
 function setState() {
   var s = document.getElementById("state");
   state = s.options[s.selectedIndex].value;
+  document.getElementById("msg").innerHTML = "";
+  document.getElementById("range").innerHTML = "";
 }
 
 // Add only business days to date
