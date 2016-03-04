@@ -87,15 +87,17 @@ var manufacturer, state;
 function setManufacturer() {
   var m = document.getElementById("manufacturer");
   manufacturer = m.options[m.selectedIndex].value;
-  document.getElementById("msg").innerHTML = "";
-  document.getElementById("range").innerHTML = "";
+  if (state) {
+    estimate();
+  }
 }
 
 function setState() {
   var s = document.getElementById("state");
   state = s.options[s.selectedIndex].value;
-  document.getElementById("msg").innerHTML = "";
-  document.getElementById("range").innerHTML = "";
+  if (manufacturer) {
+    estimate();
+  }
 }
 
 // Add only business days to date
@@ -131,10 +133,3 @@ function estimate() {
 
 document.getElementById("manufacturer").addEventListener("change", setManufacturer);
 document.getElementById("state").addEventListener("change", setState);
-
-function menuChange(id) {
-  if (document.getElementById('list' + id).style.display == 'none')
-    document.getElementById('list' + id).style.display = 'block';
-  else
-    document.getElementById('list' + id).style.display = 'none';
-}
