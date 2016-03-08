@@ -5,7 +5,7 @@ var latency = [
   1, // CatHole
   1, // GateWay
   1, // Gun Dog
-  7.5, // Hale
+  8, // Hale
   2, // High Tech
   3, // Ideal (everything but flaps)
   1, // Ideal (flaps)
